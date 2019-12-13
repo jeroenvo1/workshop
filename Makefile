@@ -14,3 +14,7 @@ build-api:
 	echo "--- BUILDING DOCKER API IMAGE ---"
 	rm -rf node_modules
 	docker build -t $(REPO)/$(IMAGE):$(CURRENT) .
+
+push-api:
+	echo "--- PUSHING API IMAGE TO HUB ---"
+	docker push $(REPO)/$(IMAGE):$(CURRENT)
