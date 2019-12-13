@@ -11,4 +11,6 @@ test:
 	echo test
 
 build-api:
-	docker image build -t workshop_api_image .
+	echo "--- BUILDING DOCKER API IMAGE ---"
+	rm -rf node_modules
+	docker build -t $(REPO)/$(IMAGE):$(CURRENT) .
