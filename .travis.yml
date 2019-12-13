@@ -4,4 +4,6 @@ node_js:
 services:
 - docker
 scripts:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - make build-api
+  - make push-api
